@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Котики</title>
+  <meta name="viewport" content="width=device-width" charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <nav class="control">
+    <i class="fa-solid fa-circle-plus add-button" title="Добавить кота"></i>
+  </nav>
+  <div class="container">
+  </div>
+  <div class="modal-container">
+    <div class="modal">
+      <i class="fa-regular fa-circle-xmark modal-close"></i>
+      <h2>Добавить котика</h2>
+      <form id="add">
+        <input type="number" name="id" placeholder="id кота" required>
+        <input type="text" name="name" placeholder="Имя кота" required>
+        <input type="url" name="image" placeholder="Картинка">
+        <input type="number" name="age" placeholder="Возраст">
+        <input type="number" name="rate" placeholder="Рейтинг" min="0" max="5">
+        <label>
+          <input type="checkbox" name="favorite" value="true">
+          Любимчик
+        </label>
+        <textarea name="description" placeholder="Информация о котике"></textarea>
+        <button type="submit">Добавить</button>
+      </form>
+    </div>
+  </div>
+  <!--коммент -->
+  
+  <div class="modal-info">
+    
+    <div class="modal-content">
+      <i class="fa-regular fa-circle-xmark close-info"></i>
+      <div class="modal-card">
+
+      </div>
+    </div>
+  </div>
+  <!--коммент -->
+  <script src="script.js"></script>
+</body>
+
+</html>
