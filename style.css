@@ -34,9 +34,7 @@ h3 {
 }
 
 .default {
-    background-image: url(img/cat3.png);
-    /* background-size: contain; */
-    /* background-position: left; */
+    background-image: url(img/cats.png);
 }
 
 .card::before {
@@ -49,7 +47,8 @@ h3 {
     background-color: #cde9cfc5;
 }
 
-h3, span {
+h3,
+span {
     position: relative;
 }
 
@@ -85,6 +84,14 @@ h3, span {
     color: rgba(56, 94, 72, 0.842);
 }
 
+.card__edit {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    cursor: pointer;
+    color: rgba(56, 94, 72, 0.842);
+}
+
 .empty {
     position: absolute;
     top: 0;
@@ -115,7 +122,7 @@ h3, span {
     padding: 30px;
     border-radius: 8px;
     width: calc(100% - 60px);
-    max-width: 300px;
+    max-width: 500px;
     max-height: calc(100% - 60px);
     position: relative;
 }
@@ -124,7 +131,7 @@ h3, span {
     margin-top: 0;
 }
 
-.modal-close {
+.close-add {
     position: absolute;
     right: 10px;
     top: 10px;
@@ -132,7 +139,7 @@ h3, span {
     cursor: pointer;
 }
 
-.modal-close:hover {
+.close-add:hover {
     color: orangered;
 }
 
@@ -141,7 +148,8 @@ h3, span {
     gap: 10px;
 }
 
-input, textarea {
+input,
+textarea {
     font-family: inherit;
     font-size: inherit;
     border: 1px solid rgb(88, 83, 0);
@@ -166,11 +174,11 @@ nav {
     color: silver;
 }
 
-.card__info:hover {
+.card__info:hover,
+.card__edit:hover {
     color: black;
 }
 
-/* коммент */
 .modal-info {
     position: fixed;
     backdrop-filter: blur(2px);
@@ -182,47 +190,85 @@ nav {
     justify-content: center;
     align-items: center;
     display: none;
-  }
-  
-  .modal-content {
+}
+
+.modal-content {
     background-color: rgb(184, 209, 187);
     padding: 30px;
     border-radius: 8px;
-    max-width: 600px;
+    max-width: 500px;
     position: relative;
-    margin: 10% auto; 
-  }
+    margin: 10% auto;
+}
 
-  .modal-card {
+.modal-card {
     display: grid;
     gap: 10px;
     justify-items: center;
-  }
-  
-  /* The Close Button */
-  .close-info {
+}
+
+.close-info,
+.close-edit {
     position: relative;
     font-size: 1.4rem;
     cursor: pointer;
     float: right;
-  }
-  
-  .close-info:hover,
-  .close-info:focus {
+}
+
+.close-info:hover,
+.close-edit:hover {
     color: orangered;
-  }
+}
 
-  .modal-img {
+.modal-img {
     width: 60%;
-  }
+}
 
-  .rate img {
+.rate img {
     width: 20px;
-  }
+}
 
-  @media (max-width: 600px) {
-    .modal-content {
+.modal-edit-content form {
+    display: grid;
+    gap: 10px;
+}
+
+.modal-edit {
+    position: fixed;
+    backdrop-filter: blur(2px);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal-edit-content {
+    background-color: rgb(184, 209, 187);
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 500px;
+    position: relative;
+    margin: 10% auto;
+}
+
+.modal-edit-card {
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+}
+
+form button {
+    justify-self: center;
+}
+
+@media (max-width: 600px) {
+
+    .modal-content,
+    .modal-edit-content {
         max-width: 300px;
     }
-  }
-
+}
